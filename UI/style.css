@@ -46,7 +46,6 @@
  }
 
  header li{
-     float: right;
      display: inline;
  }
 
@@ -114,7 +113,7 @@
     margin-top: 5px;
     border: none;
     outline: none;
-    border: 1px solid #eee;
+    border: 1px solid rgb(238, 238, 238);
     font-size: 0.9em;
     transition: border 0.5s ease;
   }
@@ -140,9 +139,6 @@
     background:#ff2105;
     border:0;
     border-radius: 5px;
-    /* margin: 0 10px 0 10px; */
-    /* padding-left: 20px;
-    padding-right:20px; */
     color:#ffffff;
     outline: none;
     cursor: pointer;
@@ -157,7 +153,7 @@
       0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
 
-  /* LOGIN STYLE */
+  /* LOGIN PAGE STYLE */
 
   .form__control .forgotten{
     font-size: 12px;
@@ -169,6 +165,15 @@
     font-weight: bold;
     color: #5bb7d4;
   }
+
+/* FORGOT_PASSWORD */
+#form-wrap{
+  min-height: 250px;
+}
+
+#form-wrap .form__control{
+  margin-top: 30px;
+}
 
   /* FOOTER */
   .footer {
