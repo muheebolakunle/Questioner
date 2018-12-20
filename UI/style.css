@@ -19,6 +19,7 @@
 
  a{
      text-decoration: none;
+     color: #014399
  }
 
 
@@ -45,7 +46,6 @@
  }
 
  header li{
-     float: right;
      display: inline;
  }
 
@@ -113,7 +113,7 @@
     margin-top: 5px;
     border: none;
     outline: none;
-    border: 1px solid #eee;
+    border: 1px solid rgb(238, 238, 238);
     font-size: 0.9em;
     transition: border 0.5s ease;
   }
@@ -135,11 +135,10 @@
 
   .button{
     height:38px;
-    width: 80%;
+    width: 84%;
     background:#ff2105;
     border:0;
-    padding-left: 20px;
-    padding-right:20px;
+    border-radius: 5px;
     color:#ffffff;
     outline: none;
     cursor: pointer;
@@ -154,6 +153,27 @@
       0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
 
+  /* LOGIN PAGE STYLE */
+
+  .form__control .forgotten{
+    font-size: 12px;
+    float: right;
+    margin: 5px 40px 5px 0;
+  }
+
+  .form__control .forgotten a:hover{
+    font-weight: bold;
+    color: #5bb7d4;
+  }
+
+/* FORGOT_PASSWORD */
+#form-wrap{
+  min-height: 250px;
+}
+
+#form-wrap .form__control{
+  margin-top: 30px;
+}
 
   /* FOOTER */
   .footer {
