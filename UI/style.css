@@ -362,8 +362,10 @@ main#main-profile{
 }
 
 footer#profile-foot{
-  float: bottom;
-  text-align: center
+  clear: both;
+  position: relative;
+  height: 40px;
+  margin-top: -40px;
 }
  
 
