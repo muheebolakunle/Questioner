@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Questioner|Meet Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Q</span>uestioner</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class=""><a href="home.html">Home</a></li>
+                    <li class=""><a href="#">Profile</a></li>
+                    <li class=""><a href="#">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   
+    <main class="container">
+        <div class="feed-container">
+            <div class="main-header">
+                <h2>Title:</h2>
+                <p>Location:</p>
+                <p>Date:</p>
+                <p>Created by:</p>
+            </div>
+        <form>
+            <div class="questionpost">
+                <input type="text" class="question" placeholder="Type your question here...">
+                <button type="submit" class="btn">Post Question</button>
+            </div>
+        </form>
+            <br>
+            <hr>
+            
+            <div class="main-header">
+                    <h3>Question feed</h3>
+            </div>
+
+            <div class="feed-area">
+                <p>Are there any provision for accomodation?</p>
+                    <button><img src="./img/thumbup.jpg" alt=""></button>
+                    <span class="thumba">3</span>
+                    <span class="highlight">67</span>
+                    <button><img src="./img/thumbdown.jpg" alt=""></button>
+                    <span><button class="" id="comment" onclick="show('commentpost')">Comment</button></span>
+                <div id="commentpost" class="commentpost">
+                    <form>
+                        <input type="text" class="comment" placeholder="Type your comment here...">
+                        <button type="submit" class="btn">Post</button>
+                    </form>
+                </div>
+                
+            </div>
+
+            <div class="feed-area">
+                    <p>Are there any provision for accomodation?</p>
+                        <button><img src="./img/thumbup.jpg" alt=""></button>
+                        <span class="thumba">3</span>
+                        <span class="highlight">67</span>
+                        <button><img src="./img/thumbdown.jpg" alt=""></button>
+                        <span><button class="" id="comment" onclick="show('commentpost1')">Comment</button></span>
+                    <div id="commentpost1" class="commentpost">
+                        <form>
+                            <input type="text" class="comment" placeholder="Type your comment here...">
+                            <button type="submit" class="btn">Post</button>
+                        </form>
+                    </div>
+            </div>
+
+
+            <div class="feed-area">
+                    <p>Are there any provision for accomodation?</p>
+                    <button><img src="./img/thumbup.jpg" alt=""></button>
+                    <span class="thumba">3</span>
+                    <span class="highlight">67</span>
+                    <button><img src="./img/thumbdown.jpg" alt=""></button>
+                    <span><button class="" id="comment" onclick="show('commentpost1')">Comment</button></span>
+                <div id="commentpost1" class="commentpost">
+                    <form>
+                        <input type="text" class="comment" placeholder="Type your comment here...">
+                        <button type="submit" class="btn">Post</button>
+                    </form>
+                </div> 
+            </div>
+                <p class="more"><a>Load more...</a></p>
+
+        </div>
+       
+          </main>
+
+    <footer class="footer">
+            <p>Questioner <span>&copy;</span> 2019</p>
+    </footer>   
+    <script src="app.js"></script>
+</body>
+</html>
