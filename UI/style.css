@@ -40,9 +40,10 @@ input:focus {
   border-color: #5bb7d4;
 }
 
-.highlight{
+.highlight,
+.current{
   color:#ff2105;
-  font-weight:bold;
+  font-weight:bolder;
 }
 
 .bolder{
@@ -214,7 +215,7 @@ input:focus {
 
   header .highlight, header .current a{
     color:#ff2105;
-    font-weight:bold;
+    font-weight:bolder;
   }
 
   .main-header{
@@ -362,8 +363,10 @@ main#main-profile{
 }
 
 footer#profile-foot{
-  float: bottom;
-  text-align: center
+  clear: both;
+  position: relative;
+  height: 40px;
+  margin-top: -40px;
 }
  
 
