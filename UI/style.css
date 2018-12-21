@@ -25,6 +25,29 @@
  h3{
    text-transform: capitalize;
  }
+ h2,h3{
+   padding: 0;
+   margin: 0;
+ }
+
+ button:hover {
+  background: #ff5d05;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+input:focus {
+  border-color: #5bb7d4;
+}
+
+.highlight{
+  color:#ff2105;
+  font-weight:bold;
+}
+
+.bolder{
+  font-weight: bolder
+}
 
 
  /* HEADER */
@@ -123,9 +146,7 @@
     transition: border 0.5s ease;
   }
 
-  .form__input:focus {
-    border-color: #5bb7d4;
-  }
+  
 
   .form span {
     margin-bottom: 20px;
@@ -152,11 +173,7 @@
   }
 
 
-  .button:hover {
-    background: #ff7e05;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-      0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  }
+  
 
   /* LOGIN PAGE STYLE */
 
@@ -211,8 +228,8 @@
   }
 
   .main-header h3{
-    margin: 20px;
-    padding: 10px;
+    margin: 10px;
+    padding: 15px;
     text-transform: capitalize;
   }
 
@@ -228,27 +245,126 @@
     color: #000000;
     margin: 10px;
     border-radius: 5px;
+    padding: 5px
   
   }
   
   .feed-container .feed-area h3,
   .feed-container .feed-area p,
   .feed-container .feed-area small{
-    margin: 5px 5px 0 5px;
+    margin: 5px 5px 5px 5px;
     padding-top: 10px ;
 
   }
   .feed-container .feed-area small a,
   .more a{
+    margin-bottom: 50px;
     color: #f2f2f2;
-    background: #5bb7d4;
+    background: #ff2105;;
     border-radius: 2px;
     cursor: pointer;
   }
   .more {
+    display: block;
     text-align: center;
     
   }
+
+  /* MEETUP DETAILS */
+  .main-header h2,
+  .main-header p{
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px
+  }
+  .questionpost{
+    justify-content:  center;
+    
+  }
+  .question,
+  .feed-area .comment{
+    font-family: inherit;
+    padding: 15px 10px;
+    width: 80%;
+    margin-top: 15px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(238, 238, 238);
+    font-size: 1.0em;
+    transition: border 0.5s ease;
+    display: block;
+    margin-bottom: 10px;
+    min-height: 40px;
+    border-radius: 10px;
+    background: #f2f2f2;
+}
+
+.questionpost .btn,
+.feed-area .btn{
+  background:#ff2105;
+  border:0;
+  border-radius: 10px;
+  color:#ffffff;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+
+}
+
+.questionpost .btn:hover,
+.feed-area .btn:hover{
+  background: #ff5d05;
+}
+
+.feed-area span{
+  margin: 10px
+}
+
+.feed-area .highlight{
+  color:#ff2105;
+  font-weight:bold;
+  margin-right: 5px
+
+}
+.feed-area .thumba{
+  color:#016699;
+  font-weight:bold;
+  margin-left: 5px
+}
+
+.feed-area #commentpost,
+.feed-area #commentpost1{
+  display: none;
+}
+
+
+/* USERPROFILE */
+
+aside#profile{
+  float: left;
+  width: 20%;
+  background: #016699;
+  color: #ffffff;
+  margin: 25px 10px 0 0;
+  padding: 10px;
+  min-height: 814px;
+  border-radius: 5px
+}
+
+main#main-profile{
+  float: right;
+  width: 75%
+}
+
+footer#profile-foot{
+  float: bottom;
+  text-align: center
+}
  
 
 
@@ -261,7 +377,9 @@
 
     header #branding,
      header nav,
-     header nav li{
+     header nav li,
+     aside#profile,
+     main#main-profile {
       float: none;
       text-align: center;
       width: 100%;
@@ -274,6 +392,13 @@
     .form{
       margin: 20px
     }
-
+    aside#profile{
+      min-height: 150px;
+      width: inherit;
+      margin: 10px  0 0 0;
+    }
+    main#main-profile .feed-container{
+      margin: 0;
+    }
   }
    
