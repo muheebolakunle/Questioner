@@ -173,6 +173,57 @@ input:focus {
     font-size: 16px;
   }
 
+  div.wrapper{
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    min-height: 500px;
+    margin-bottom: 40px
+  }
+
+  #brief{
+    float: left;
+    width: 55%;
+    background: #016699; 
+    color: #f1f1f1;
+    align-content: center;
+    margin: 27px 0 10px 0;
+    min-height: 406px;
+    /* padding: 40px ; */
+    text-align: center;
+    box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
+  }
+  #brief h1{
+    margin: auto;
+    padding: 0;
+    margin-top: 150px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    width: 80%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  #brief h3{
+    color: #ffffff;
+    font-size: 23px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: none;
+    font-weight: bolder;
+  }
+
+  #main{
+    float: right;
+    width: 40%
+  }
+  #main .form__wrapper{
+    
+    width: 80%
+  }
+
 
   
 
@@ -373,7 +424,7 @@ footer#profile-foot{
 
   /* MEDIA QUERY */
   @media(max-width: 768px){
-    .form__wrapper, .container{
+    .form__wrapper, .container,{
       width: 90%;
       margin-top: 0px;
     }
@@ -382,10 +433,20 @@ footer#profile-foot{
      header nav,
      header nav li,
      aside#profile,
-     main#main-profile {
+     main#main-profile ,
+     #brief,
+     #main{
       float: none;
       text-align: center;
       width: 100%;
+    }
+    
+    #brief h3{
+      font-size: 20px;
+    }
+    #brief h1{
+      margin-top: 10px;
+      font-size: 20px;
     }
 
     header a{
@@ -395,13 +456,21 @@ footer#profile-foot{
     .form{
       margin: 20px
     }
-    aside#profile{
+    aside#profile,#brief{
       min-height: 150px;
       width: inherit;
       margin: 10px  0 0 0;
     }
+    #brief{
+      min-height: 100px;
+      padding-top: 10px;
+    }
     main#main-profile .feed-container{
       margin: 0;
+    }
+    #main .form__wrapper{
+      width: 100%;
+      margin-top: 0;
     }
   }
    
