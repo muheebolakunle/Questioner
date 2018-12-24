@@ -424,7 +424,9 @@ footer#profile-foot{
 
   /* MEDIA QUERY */
   @media(max-width: 768px){
-    .form__wrapper, .container,{
+    .form__wrapper, .container,
+    main.container.form__wrapper,
+    section.form__wrapper .form{
       width: 90%;
       margin-top: 0px;
     }
@@ -440,6 +442,8 @@ footer#profile-foot{
       text-align: center;
       width: 100%;
     }
+
+    
     
     #brief h3{
       font-size: 20px;
