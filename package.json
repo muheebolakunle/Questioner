@@ -2,10 +2,10 @@
   "name": "Questioner",
   "version": "1.0.0",
   "description": "Crowd-source questions for a meetup. ​Questioner​​ helps the meetup organizer prioritize  questions to be answered.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node_modules/.bin/nodemon api/app.js --exec babel-node --",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc --reporter=text mocha -c ./api/v1/tests/**/*.js --exit --require babel-core/register"
   },
   "repository": {
     "type": "git",
