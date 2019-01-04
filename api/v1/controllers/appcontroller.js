@@ -1,3 +1,3 @@
 export default {
-  home: (req, res) => res.status(404).send({ message: 'Invalid request.' }),
+  home: (req, res) => res.status(200).send({ message: 'Welcome to Questioner API' }),
 };
