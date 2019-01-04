@@ -1,4 +1,4 @@
-import { meetupStore, rsvpStore } from '../datastore';
+import { meetupStore, rsvpStore } from '../datastorage';
 import Rsvp from '../models/Rsvp';
 
 export default {

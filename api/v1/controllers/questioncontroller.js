@@ -1,5 +1,5 @@
 import { meetupStore, questionStore } from '../datastorage';
-import Questions from '../models/Questions';
+import Questions from '../models/Question';
 
 export default {
   createQuestion: (req, res) => {

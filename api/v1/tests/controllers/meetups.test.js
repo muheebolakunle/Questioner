@@ -3,7 +3,7 @@ import chaiHttp from 'chai-http';
 import app from '../../../app';
 import {
   missing, invalid, correct,
-  correct2, correct3,, invalidrsvp,
+  correct2, correct3, invalidrsvp,
   wrongrsvp, rsvp, missingrsvp,
 } from '../mockdata/meetupdata';
 
