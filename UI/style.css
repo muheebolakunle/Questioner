@@ -380,6 +380,10 @@ input:focus {
 
 }
 
+.feed-area .btn{
+  margin-left: 0px;
+}
+
 .questionpost .btn:hover,
 .feed-area .btn:hover{
   background: #ff5d05;
@@ -503,4 +507,17 @@ footer#profile-foot{
       margin-top: 0;
     }
   }
-   
+ 
+  @media screen and (min-width: 769px) and (max-width:899px) {
+    aside#profile{
+      float: none;
+      width: 80%;
+      min-height: 130px;
+      width: inherit;
+    }
+    
+    main#main-profile{
+      float: none;
+      width: 90%
+    }
+  }
