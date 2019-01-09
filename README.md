@@ -1,4 +1,4 @@
 # Questioner
-​ Questioner​​ helps the meetup organizer prioritize 
-questions to be answered. Other users can vote on asked questions and they bubble to the top 
-or bottom of the log. 
+Questioner​​ is a fullstack application that helps the meetup organizer prioritize  questions to be answered during meetup. Other users can vote on asked questions and they bubble to the top  or bottom of the log. 
+
+ [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/muheebolakunle/Questioner) [![Build Status](https://travis-ci.com/muheebolakunle/Questioner.svg?branch=develop)](https://travis-ci.com/muheebolakunle/Questioner) [![Coverage Status](https://coveralls.io/repos/github/muheebolakunle/Questioner/badge.svg?branch=develop)](https://coveralls.io/github/muheebolakunle/Questioner?branch=develop) [![Heroku](https://heroku-badge.herokuapp.com/?app=kunlexyquestioner&style=flat&svg=1&root=api/v1)](https://kunlexyquestioner.herokuapp.com/api/v1/)
