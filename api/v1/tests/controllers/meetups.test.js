@@ -129,34 +129,34 @@ describe('Meetups', () => {
         .post('/api/v1/meetups/10/rsvps')
         .send(invalidrsvp);
 
-       expect(res).to.have.status(404);
+      expect(res).to.have.status(404);
       expect(res.body).to.have.property('error');
     });
 
-     it('it should return 400 if fields contain invalid data', async () => {
+    it('it should return 400 if fields contain invalid data', async () => {
       const res = await chai.request(app)
         .post('/api/v1/meetups/1/rsvps')
         .send(wrongrsvp);
 
-       expect(res).to.have.status(400);
+      expect(res).to.have.status(400);
       expect(res.body).to.have.property('error');
     });
 
-     it('should return 200 if response is successfull', async () => {
+    it('should return 200 if response is successfull', async () => {
       const res = await chai.request(app)
         .post('/api/v1/meetups/1/rsvps')
         .send(rsvp);
 
-       expect(res).to.have.status(200);
+      expect(res).to.have.status(200);
       expect(res.body).to.have.property('data');
     });
 
-     it('it should return 400 if required fields are missing', async () => {
+    it('it should return 400 if required fields are missing', async () => {
       const res = await chai.request(app)
         .post('/api/v1/meetups/1/rsvps')
         .send(missingrsvp);
 
-       expect(res).to.have.status(400);
+      expect(res).to.have.status(400);
       expect(res.body).to.have.property('error');
     });
   });
