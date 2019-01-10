@@ -22,7 +22,7 @@ export default {
     if (questionStore.length === 0) {
       return res.status(200).send({
         status: 200,
-        message: 'No questions available yet.',
+        message: 'No question(s) available yet.',
         data: [],
       });
     }

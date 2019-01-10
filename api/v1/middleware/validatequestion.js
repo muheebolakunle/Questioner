@@ -22,6 +22,10 @@ export default (req, res, next) => {
     errors.createdBy = 'Meetup id should be a number';
   }
 
+  if (typeof (title) !== 'string') {
+    errors.title = 'Your title should be a string';
+  }
+
   if (Object.keys(errors).length > 0) {
     return res.status(400).send({ status: 400, error: errors });
   }
