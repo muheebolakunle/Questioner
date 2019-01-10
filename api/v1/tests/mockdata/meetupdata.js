@@ -5,34 +5,30 @@ const missing = {
 };
 
 const invalid = {
-  topic: 'abc#',
+  topic: 67,
   location: 'abc%',
   happeningOn: 'wrongdate',
-  images: ['http://sample.com/image1', 'http://sample.com/image2.jpg'],
   tags: ['tag1', 'tag2&'],
 };
 
 const correct = {
   topic: 'topic 001',
   location: 'location 001',
-  happeningOn: '2019-12-12T23:02',
-  images: ['http://sample.com/image1.jpg', 'http://sample.com/image2.jpg'],
+  happeningOn: '10/23/2019',
   tags: ['tag1', 'tag2'],
 };
 
 const correct2 = {
   topic: 'topic 001',
   location: 'location 001',
-  happeningOn: '2019-12-12T23:02',
-  images: ['http://sample.com/image1.jpg', 'http://sample.com/image2.jpg'],
+  happeningOn: '11/23/2019',
   tags: ['tag1', 'tag2'],
 };
 
 const correct3 = {
   topic: 'topic 001',
   location: 'location 001',
-  happeningOn: '2019-12-08T23:02',
-  images: ['http://sample.com/image1.jpg', 'http://sample.com/image2.jpg'],
+  happeningOn: '08/23/2019',
   tags: ['tag1', 'tag2'],
 };
 
