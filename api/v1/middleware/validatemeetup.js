@@ -1,4 +1,6 @@
 import moment from 'moment';
+import { meetupStore } from '../datastorage';
+
 
 export default (req, res, next) => {
   const errors = {};
@@ -28,7 +30,6 @@ export default (req, res, next) => {
   if (moment(meetup.happeningOn, 'MM/DD/YYYY', true).isValid() === false) {
     errors.date = 'Please insert a valid date in the format MM/DD/YYYY';
   }
-
 
   if (tags) {
     tags.forEach((tag) => {

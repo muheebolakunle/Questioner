@@ -34,22 +34,22 @@ const correct3 = {
 
 const invalidrsvp = {
   meetup: '10',
-  response: 'Yes',
+  status: 'Yes',
 };
 
 const wrongrsvp = {
   meetup: '1',
-  response: 'abc',
+  status: 'abc',
 };
 
 const rsvp = {
   meetup: '1',
-  response: 'Yes',
+  status: 'Yes',
 };
 
 const missingrsvp = {
   meetup: '',
-  response: '',
+  status: '',
 };
 
 export {
