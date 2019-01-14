@@ -1,21 +1,24 @@
 export default (req, res, next) => {
   const errors = {};
   const rsvp = req.body;
-  const { meetup, response } = rsvp;
+  const { meetup, status } = rsvp;
   const responses = ['yes', 'no', 'maybe'];
 
-  const fields = [meetup, response];
-  let emptyField;
-  fields.map((field) => {
-    if (!field) {
-      emptyField = true;
-    }
-    return emptyField;
-  });
-  if (emptyField) return res.status(400).send({ status: 400, error: 'Please fill in all fields.' });
 
-  if (!responses.includes(response.toLowerCase())) {
-    errors.response = 'Please insert a valid response.';
+  if (!meetup) {
+    errors.meetup = 'A meetup id is required';
+  }
+
+  if (!status) {
+    errors.status = 'Please input your rsvp status ';
+  }
+
+  if (typeof (status) !== 'string') {
+    errors.status = 'status should be a string';
+  }
+
+  if (!responses.includes(status.toLowerCase())) {
+    errors.status = 'Please insert a valid status.';
   }
 
   if (Object.keys(errors).length > 0) {

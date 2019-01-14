@@ -5,21 +5,44 @@ export default (req, res, next) => {
     meetup, title, body, createdBy,
   } = question;
 
-  const fields = [meetup, title, body, createdBy];
-  let emptyField;
-  fields.map((field) => {
-    if (!field) {
-      emptyField = true;
-    }
-    return emptyField;
-  });
-  if (emptyField) return res.status(400).send({ status: 400, error: 'Please fill in all fields.' });
-
-  if (!parseInt(meetup, 10)) {
-    errors.meetup = 'Meetup id should be a number';
+  if (!meetup) {
+    errors.meetup = 'A meetup id is required';
   }
-  if (!parseInt(createdBy, 10)) {
-    errors.createdBy = 'Meetup id should be a number';
+
+  if (!title) {
+    errors.title = 'Please input the question title';
+  }
+
+  if (!body) {
+    errors.body = 'Please input the question body';
+  }
+
+  if (!createdBy) {
+    errors.createdBy = 'user id is required';
+  }
+
+  if (typeof (title) !== 'string') {
+    errors.title = 'status';
+  }
+
+  if (typeof (body) !== 'string') {
+    errors.body = 'Your question body should be a string';
+  }
+
+  if (body && !body.replace(/\s/g, '').length) {
+    errors.body = 'Your question body should not contain only whitespaces';
+  }
+
+  if (title && !title.replace(/\s/g, '').length) {
+    errors.title = 'Your question title should not contain only whitespaces';
+  }
+
+  if (!Number.isInteger(parseInt(meetup, 10))) {
+    errors.meetup = 'Invalid Meetup id, it should be an integer';
+  }
+  if (!Number.isInteger(parseInt(createdBy,
+    10))) {
+    errors.createdBy = 'Invalid user id, it should be an integer';
   }
 
   if (Object.keys(errors).length > 0) {

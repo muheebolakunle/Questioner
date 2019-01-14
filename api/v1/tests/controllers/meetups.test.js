@@ -74,6 +74,7 @@ describe('Meetups', () => {
 
       expect(res).to.have.status(201);
       expect(res.body).to.have.property('data');
+      // expect(res.body.data.topic).to.equal('topic 001');
     });
   });
 

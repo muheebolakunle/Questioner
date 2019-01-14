@@ -1,46 +1,40 @@
+import moment from 'moment';
+import { meetupStore } from '../datastorage';
+
+
 export default (req, res, next) => {
   const errors = {};
-  const checkInput = /[!@#$%^&*()_+\-=[\]{};':"\\|<>/?]/;
-  const checkImgUrl = /(http(s?):(\/){2})([^/])([/.\w\s-])*\.(?:jpg|png)/;
-  const checkDate = /[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}/;
   const meetup = req.body;
-  const { images, tags } = meetup;
+  const { tags } = meetup;
 
   if (!meetup.topic) {
     errors.topic = 'A topic is required';
   }
 
-  if (checkInput.test(meetup.topic)) {
-    errors.validTopic = 'Your topic should contain only alphabets and numbers.';
+  if (typeof (meetup.topic) !== 'string') {
+    errors.validTopic = 'Your topic should be a string';
   }
 
   if (!meetup.location) {
     errors.location = 'A location is required';
   }
 
-  if (checkInput.test(meetup.location)) {
-    errors.validTopic = 'Your location should contain only alphabets and numbers.';
+  if (typeof (meetup.location) !== 'string') {
+    errors.validLocation = 'Your location should be a string';
   }
 
   if (!meetup.happeningOn) {
-    errors.happeningOn = 'A date and time for the meetup is required';
+    errors.happeningOn = 'A date for the meetup is required';
   }
 
-  if (!checkDate.test(meetup.happeningOn)) {
-    errors.date = 'Please insert a valid date and time';
-  }
-  if (images) {
-    images.forEach((image) => {
-      if (!checkImgUrl.test(image)) {
-        errors.images = `${image} is not a valid image link`;
-      }
-    });
+  if (moment(meetup.happeningOn, 'MM/DD/YYYY', true).isValid() === false) {
+    errors.date = 'Please insert a valid date in the format MM/DD/YYYY';
   }
 
   if (tags) {
     tags.forEach((tag) => {
-      if (checkInput.test(tag)) {
-        errors.tags = `${tag} should contain only alphabets and numbers.`;
+      if (typeof (tag) !== 'string') {
+        errors.tags = `${tag} should be a string`;
       }
     });
   }
