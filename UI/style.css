@@ -75,20 +75,24 @@ input:focus {
 
  header li{
      display: inline;
-     padding: 0 20px 0 20px;
+     padding: 5px 20px 5px 20px;
+     background: #f1f1f1;
+     border-radius: 3px;
+
+
  }
 
  header a{
      text-decoration: none;
      text-transform: uppercase;
      font-size: 14px;
-     color: #5bb7d4;
+     color: #ff2105;
 
  }
 
  header a:hover{
      font-weight: bold;
-     color: #ffffff;
+     color: #016699;
 
  }
 
@@ -187,7 +191,7 @@ input:focus {
     background: #016699; 
     color: #f1f1f1;
     align-content: center;
-    margin: 27px 0 10px 0;
+    margin: 27px 0 10px 45px;
     min-height: 406px;
     /* padding: 40px ; */
     text-align: center;
@@ -264,8 +268,12 @@ input:focus {
 
   /* HOME PAGE */
 
-  header .highlight, header .current a{
+  header .highlight, {
     color:#ff2105;
+    font-weight:bolder;
+  }
+  header .current a{
+    color:#016699;
     font-weight:bolder;
   }
 
@@ -312,7 +320,7 @@ input:focus {
   .more a{
     margin-bottom: 50px;
     color: #f2f2f2;
-    background: #ff2105;;
+    background: #ff2105;
     border-radius: 2px;
     cursor: pointer;
   }
@@ -321,6 +329,10 @@ input:focus {
     text-align: center;
     
   }
+  .feed-container .feed-area small a:hover,
+  .more a:hover{
+    background: #016699;
+  } 
 
   /* MEETUP DETAILS */
   .main-header h2,
@@ -368,6 +380,10 @@ input:focus {
 
 }
 
+.feed-area .btn{
+  margin-left: 0px;
+}
+
 .questionpost .btn:hover,
 .feed-area .btn:hover{
   background: #ff5d05;
@@ -402,7 +418,7 @@ aside#profile{
   width: 20%;
   background: #016699;
   color: #ffffff;
-  margin: 25px 10px 0 0;
+  margin: 20px 10px 0 15px;
   padding: 10px;
   min-height: 814px;
   border-radius: 5px
@@ -420,6 +436,9 @@ footer#profile-foot{
   margin-top: -40px;
 }
  
+.adform__signup{
+  padding: 15px 15px 10px;
+}
 
 
   /* MEDIA QUERY */
@@ -443,7 +462,9 @@ footer#profile-foot{
       width: 100%;
     }
 
-    
+    .button{
+      min-height: 45px;
+    }
     
     #brief h3{
       font-size: 20px;
@@ -453,12 +474,21 @@ footer#profile-foot{
       font-size: 20px;
     }
 
+    header{
+      min-height: 70px;
+    }
+    header li{
+      padding: 0 5px;
+    }
+
     header a{
       font-size: 12px;
       text-transform: capitalize;
     }
     .form{
-      margin: 20px
+      margin: 0px;
+      width: 100%;
+      padding: 0;
     }
     aside#profile,#brief{
       min-height: 150px;
@@ -477,4 +507,17 @@ footer#profile-foot{
       margin-top: 0;
     }
   }
-   
+ 
+  @media screen and (min-width: 769px) and (max-width:899px) {
+    aside#profile{
+      float: none;
+      width: 80%;
+      min-height: 130px;
+      width: inherit;
+    }
+    
+    main#main-profile{
+      float: none;
+      width: 90%
+    }
+  }
